@@ -2,3 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "tailwindcss/variants";
+
+@import "./base.scss";
+@import "../Home/Home.scss";
+@import "../NotFound/NotFound.scss";
