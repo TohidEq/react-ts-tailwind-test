@@ -1,0 +1,47 @@
+nav.nav-desktop {
+  @apply container mx-auto
+    justify-between
+  bg-royal
+    h-32
+
+    hidden  lg:flex;
+
+  * {
+    @apply transition-colors duration-150;
+  }
+
+  & > * {
+    @apply grid content-center;
+  }
+
+  .nav-title {
+    @apply font-semibold
+        text-3xl;
+  }
+
+  .nav-links {
+    @apply flex 
+        text-2xl;
+
+    a {
+      @apply hover:text-latte/60
+      mx-4;
+    }
+    a.active {
+      @apply text-honey hover:text-honey/60;
+    }
+  }
+
+  .user-status {
+    @apply flex text-lg;
+
+    a {
+      @apply px-8 py-2 mx-2 rounded 
+        border-2 border-honey 
+        hover:scale-[105%];
+    }
+    a.sign-up {
+      @apply bg-honey text-latte;
+    }
+  }
+}

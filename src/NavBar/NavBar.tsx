@@ -1,7 +1,14 @@
 import React from "react";
+import NavDesktop from "./NavDesktop";
+import NavMobile from "./NavMobile";
 
 function NavBar() {
-  return <div>NavBar</div>;
+  return (
+    <>
+      <NavDesktop />
+      <NavMobile />
+    </>
+  );
 }
 
 export default NavBar;
