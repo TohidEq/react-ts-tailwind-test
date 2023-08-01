@@ -536,12 +536,29 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.block{
+  display: block;
+}
+
 .text-honey{
   --tw-text-opacity: 1;
   color: rgb(192 166 21 / var(--tw-text-opacity));
 }
 
+.hover\:scale-\[105\%\]:hover{
+  --tw-scale-x: 105%;
+  --tw-scale-y: 105%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px){
+  .lg\:hidden{
+    display: none;
+  }
+}
+
 body{
+  overflow-x: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(21 15 40 / var(--tw-bg-opacity));
   font-family: Lexend, sans-serif;
@@ -655,6 +672,231 @@ nav.nav-desktop {
     a{
       margin-left: 0.5rem;
       margin-right: 0.5rem;
+    }
+    a{
+      border-radius: 0.25rem;
+    }
+    a{
+      border-width: 2px;
+    }
+    a{
+      --tw-border-opacity: 1;
+      border-color: rgb(192 166 21 / var(--tw-border-opacity));
+    }
+    a{
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    a{
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    a:hover{
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    a.sign-up{
+      --tw-bg-opacity: 1;
+      background-color: rgb(192 166 21 / var(--tw-bg-opacity));
+    }
+    a.sign-up{
+      --tw-text-opacity: 1;
+      color: rgb(247 245 243 / var(--tw-text-opacity));
+    }
+  }
+}
+
+nav.nav-mobile{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  nav.nav-mobile{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  nav.nav-mobile{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  nav.nav-mobile{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  nav.nav-mobile{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  nav.nav-mobile{
+    max-width: 1536px;
+  }
+}
+
+nav.nav-mobile{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 15 40 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px){
+  nav.nav-mobile{
+    display: none;
+  }
+}
+
+nav.nav-mobile {
+  *{
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  *{
+    transition-duration: 150ms;
+  }
+  & > *{
+    display: grid;
+  }
+  & > *{
+    align-content: center;
+  }
+  .nav-title{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .nav-title{
+    font-weight: 600;
+  }
+  @media (min-width: 640px){
+    .nav-title{
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+  }
+  .nav-btn{
+    margin-right: 0.5rem;
+  }
+  .nav-btn{
+    height: 100%;
+  }
+  .nav-btn{
+    width: 1.5rem;
+  }
+  @media (min-width: 640px){
+    .nav-btn{
+      width: 2rem;
+    }
+  }
+  .nav-btn {
+    svg{
+      height: 100%;
+    }
+    svg{
+      width: 100%;
+    }
+  }
+}
+
+.nav-side {
+  * &{
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  * &{
+    transition-duration: 200ms;
+  }
+  position: absolute;
+  left: 100%;
+  z-index: 50;
+  width: 0px;
+  border-bottom-left-radius: 0.75rem;
+  background-color: rgb(21 15 40 / 0.05);
+  --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+}
+
+@media (min-width: 1024px){
+  .nav-side{
+    display: none;
+  }
+}
+
+.nav-side {
+  *{
+    visibility: hidden;
+  }
+  &.true{
+    left: 20%;
+  }
+  &.true{
+    width: 80%;
+  }
+  &.true {
+    *{
+      visibility: visible;
+    }
+  }
+  .nav-links{
+    padding: 1rem;
+  }
+  .nav-links{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .nav-links {
+    a{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    a{
+      display: block;
+    }
+    a{
+      padding: 0.5rem;
+    }
+    a:hover{
+      color: rgb(247 245 243 / 0.6);
+    }
+    a.active{
+      --tw-text-opacity: 1;
+      color: rgb(192 166 21 / var(--tw-text-opacity));
+    }
+    a.active:hover{
+      color: rgb(192 166 21 / 0.6);
+    }
+  }
+  .user-status{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .user-status {
+    a{
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    a{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    a{
+      display: block;
+    }
+    a{
+      width: 9rem;
     }
     a{
       border-radius: 0.25rem;
