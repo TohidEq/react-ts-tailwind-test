@@ -4,5 +4,18 @@
 @import "tailwindcss/variants";
 
 @import "./base.scss";
+
+@import "../NavBar/NavBar.scss";
+@import "../Footer/Footer.scss";
+
 @import "../Home/Home.scss";
 @import "../NotFound/NotFound.scss";
+
+@import "../Home/Welcome/Welcome.scss";
+@import "../Home/WhatWeDo/WhatWeDo.scss";
+@import "../Home/AboutUs/AboutUs.scss";
+@import "../Home/OurTeam/OurTeam.scss";
+@import "../Home/RealLifeStories/RealLifeStories.scss";
+@import "../Home/ClientsStories/ClientsStories.scss";
+@import "../Home/AreYouReady/AreYouReady.scss";
+@import "../Home/ContactUs/ContactUs.scss";
