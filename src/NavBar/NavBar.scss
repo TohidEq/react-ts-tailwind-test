@@ -7,7 +7,7 @@ nav.nav-desktop {
     hidden  lg:flex;
 
   * {
-    @apply transition-colors duration-150;
+    @apply transition duration-150;
   }
 
   & > * {
@@ -36,18 +36,20 @@ nav.nav-desktop {
     @apply flex text-lg;
 
     a {
-      @apply px-8 py-2 mx-2 rounded 
+      @apply px-8 py-2 rounded 
         border-2 border-honey 
-        hover:scale-[105%];
+        hover:scale-[105%] 
+        active:scale-[95&]
+        text-honey;
     }
     a.sign-up {
-      @apply bg-honey text-latte;
+      @apply bg-honey ml-4 text-latte;
     }
   }
 }
 
 nav.nav-mobile {
-  @apply container mx-auto
+  @apply container mx-auto px-2
       justify-between
     bg-royal
       h-16
@@ -55,7 +57,7 @@ nav.nav-mobile {
       flex  lg:hidden;
 
   * {
-    @apply transition-colors duration-150;
+    @apply transition duration-150;
   }
 
   & > * {
@@ -68,7 +70,7 @@ nav.nav-mobile {
   }
 
   .nav-btn {
-    @apply mr-2 h-full w-6 sm:w-8;
+    @apply h-full w-6 sm:w-8;
     svg {
       @apply h-full w-full;
     }
@@ -80,12 +82,13 @@ nav.nav-mobile {
     @apply transition-all duration-200;
   }
 
+  background: linear-gradient(180deg, #150f28 0%, rgba(21, 15, 40, 0) 157.3%);
+
   @apply absolute 
     
     left-full
     lg:hidden
     w-0
-    bg-royal/5
     rounded-bl-xl
     backdrop-blur-lg z-50;
   * {
@@ -116,13 +119,11 @@ nav.nav-mobile {
     @apply text-lg;
 
     a {
-      @apply px-8 py-2 mx-6 rounded block w-36
-				border-2 border-honey 
+      @apply mx-6 block w-36 my-4
+        transition-all duration-150
+				
 				hover:scale-[105%]
-        my-4;
-    }
-    a.sign-up {
-      @apply bg-honey text-latte;
+        active:scale-95;
     }
   }
 }

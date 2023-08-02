@@ -1,0 +1,30 @@
+.welcome {
+  @apply h-screen 
+    bg-welcome-img bg-cover
+    text-center;
+
+  .welcome-gradient {
+    background: linear-gradient(180deg, #150f28 0%, rgba(21, 15, 40, 0) 157.3%);
+
+    @apply h-full bg-opacity-50;
+  }
+
+  .welcome-text {
+    @apply max-w-[600px] h-full mx-auto grid place-content-center pb-32;
+
+    .welcome-title {
+      @apply font-bold relative leading-snug
+      text-6xl;
+      img {
+        @apply absolute bottom-0 right-3 scale-110;
+      }
+    }
+
+    p {
+      @apply py-10 px-7 font-light text-lg;
+    }
+    button {
+      @apply mx-auto px-12 py-3;
+    }
+  }
+}

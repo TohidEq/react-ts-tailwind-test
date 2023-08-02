@@ -3,3 +3,18 @@ body {
   @apply bg-royal text-white font-custom
     overflow-x-hidden;
 }
+
+.btn1 {
+  @apply px-7 py-2 rounded transition-all duration-150
+    border-2 border-honey 
+    hover:scale-[105%] 
+    active:scale-[95&]
+    ml-4   text-honey;
+}
+.btn2 {
+  @apply px-7 py-2 rounded transition-all duration-150
+    border-2 border-honey 
+    hover:scale-[105%] 
+    active:scale-[95&]
+    bg-honey ml-4 text-latte;
+}

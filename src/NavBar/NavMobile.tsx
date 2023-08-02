@@ -18,7 +18,7 @@ function NavMobile() {
 
         <div className="nav-item">
           <button
-            className="hover:scale-[105%] nav-btn"
+            className=" hover:scale-[105%] nav-btn"
             onClick={() => setBtn(!btn)}
           >
             {btn ? <BiRightArrow /> : <BiLeftArrow />}
@@ -40,10 +40,10 @@ function NavMobile() {
 
         <div className="nav-item">
           <div className="user-status">
-            <Link to={"/sign-in"} className="sign-in">
+            <Link to={"/sign-in"} className="btn1">
               Sign In
             </Link>
-            <Link to={"/sign-up"} className="sign-up">
+            <Link to={"/sign-up"} className="btn2">
               Sign Up
             </Link>
           </div>
