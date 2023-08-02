@@ -1497,3 +1497,246 @@ nav.nav-mobile {
     }
   }
 }
+
+.about-us{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .about-us{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .about-us{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .about-us{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .about-us{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .about-us{
+    max-width: 1536px;
+  }
+}
+
+.about-us{
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px){
+  .about-us{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 768px){
+  .about-us{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+.about-us {
+  .about-us-img{
+    margin-left: 0.5rem;
+  }
+  .about-us-img{
+    display: none;
+  }
+  .about-us-img{
+    background-image: url('/aboutUs.png');
+  }
+  .about-us-img{
+    background-size: cover;
+  }
+  .about-us-img{
+    background-position: center;
+  }
+  @media (min-width: 768px){
+    .about-us-img{
+      z-index: 0;
+    }
+  }
+  @media (min-width: 768px){
+    .about-us-img{
+      display: block;
+    }
+  }
+  @media (min-width: 768px){
+    .about-us-img{
+      height: auto;
+    }
+  }
+  @media (min-width: 768px){
+    .about-us-img{
+      width: auto;
+    }
+  }
+  @media (min-width: 1024px){
+    .about-us-img{
+      margin-left: 3rem;
+    }
+  }
+  .about-us-smry{
+    background-image: url('/aboutUs.png');
+  }
+  .about-us-smry{
+    background-size: cover;
+  }
+  .about-us-smry{
+    background-position: center;
+  }
+  .about-us-smry{
+    text-align: left;
+  }
+  @media (min-width: 768px){
+    .about-us-smry{
+      background-image: none;
+    }
+  }
+  .about-us-smry {
+    .about-us-gradient {
+      background: linear-gradient(
+        90deg,
+        #150f28 0%,
+        rgba(21, 15, 40, 0) 157.3%
+      );
+    }
+    .about-us-gradient{
+      padding: 1rem;
+    }
+    span{
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    span{
+      font-weight: 700;
+    }
+    span{
+      --tw-text-opacity: 1;
+      color: rgb(192 166 21 / var(--tw-text-opacity));
+    }
+    @media (min-width: 640px){
+      span{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+    }
+    @media (min-width: 768px){
+      span{
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+    }
+    h1{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    h1{
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+    h1{
+      font-weight: 700;
+    }
+    h1{
+      line-height: 1.375;
+    }
+    @media (min-width: 640px){
+      h1{
+        font-size: 3rem;
+        line-height: 1;
+      }
+    }
+    @media (min-width: 1024px){
+      h1{
+        padding-top: 1.5rem;
+      }
+    }
+    @media (min-width: 1024px){
+      h1{
+        font-size: 3.75rem;
+        line-height: 1;
+      }
+    }
+    p{
+      max-width: 42rem;
+    }
+    p{
+      padding-top: 1rem;
+    }
+    p{
+      padding-bottom: 2rem;
+    }
+    p{
+      font-weight: 300;
+    }
+    p{
+      line-height: 1.375;
+    }
+    p{
+      opacity: 0.7;
+    }
+    @media (min-width: 768px){
+      p{
+        padding-top: 1.5rem;
+      }
+    }
+    @media (min-width: 768px){
+      p{
+        padding-bottom: 2.5rem;
+      }
+    }
+    @media (min-width: 768px){
+      p{
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+    }
+    a{
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    a{
+      display: inline-block;
+    }
+    a{
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    a{
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    @media (min-width: 640px){
+      a{
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+    }
+    @media (min-width: 640px){
+      a{
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+    }
+  }
+}
