@@ -19,7 +19,7 @@ module.exports = {
         transparent: "transparent",
       },
       backgroundImage: {
-        'welcome-img': "url('../../public/wlcm.png')",
+        'welcome-img': "url('/wlcm.png')",
       }
     }
   },
