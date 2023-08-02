@@ -999,9 +999,11 @@ nav.nav-mobile {
 }
 
 .welcome{
-  height: 100vh;
+  height: 97vh;
   background-image: url('../../public/wlcm.png');
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   text-align: center;
   .welcome-gradient {
     background: linear-gradient(180deg, #150f28 0%, rgba(21, 15, 40, 0) 157.3%);
@@ -1036,57 +1038,143 @@ nav.nav-mobile {
       position: relative;
     }
     .welcome-title{
-      font-size: 3.75rem;
-      line-height: 1;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .welcome-title{
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+    .welcome-title{
+      font-size: 1.875rem;
+      line-height: 2.25rem;
     }
     .welcome-title{
       font-weight: 700;
     }
-    .welcome-title{
-      line-height: 1.375;
+    @media (min-width: 640px){
+      .welcome-title{
+        font-size: 3rem;
+        line-height: 1;
+      }
+    }
+    @media (min-width: 768px){
+      .welcome-title{
+        font-size: 3.75rem;
+        line-height: 1;
+      }
     }
     .welcome-title {
+      span{
+        line-height: 1.5;
+      }
       img{
         position: absolute;
       }
       img{
-        bottom: 0px;
+        bottom: -1rem;
       }
       img{
-        right: 0.75rem;
+        right: -3.5rem;
       }
       img{
-        --tw-scale-x: 1.1;
-        --tw-scale-y: 1.1;
+        --tw-scale-x: 55%;
+        --tw-scale-y: 55%;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
       }
+      @media (min-width: 640px){
+        img{
+          bottom: -0.25rem;
+        }
+      }
+      @media (min-width: 640px){
+        img{
+          right: -1rem;
+        }
+      }
+      @media (min-width: 640px){
+        img{
+          --tw-scale-x: 85%;
+          --tw-scale-y: 85%;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+      }
+      @media (min-width: 768px){
+        img{
+          bottom: 0.25rem;
+        }
+      }
+      @media (min-width: 768px){
+        img{
+          right: 0.25rem;
+        }
+      }
+      @media (min-width: 768px){
+        img{
+          --tw-scale-x: 105%;
+          --tw-scale-y: 105%;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+      }
+    }
+    p{
+      max-width: 28rem;
     }
     p{
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
     }
     p{
-      padding-left: 1.75rem;
-      padding-right: 1.75rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
     p{
-      font-size: 1.125rem;
-      line-height: 1.75rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
     p{
       font-weight: 300;
+    }
+    @media (min-width: 640px){
+      p{
+        max-width: none;
+      }
+    }
+    @media (min-width: 640px){
+      p{
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+      }
+    }
+    @media (min-width: 640px){
+      p{
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
     }
     button{
       margin-left: auto;
       margin-right: auto;
     }
     button{
-      padding-left: 3rem;
-      padding-right: 3rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
     button{
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    @media (min-width: 640px){
+      button{
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+    }
+    @media (min-width: 640px){
+      button{
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
     }
   }
 }

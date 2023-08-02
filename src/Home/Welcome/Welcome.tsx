@@ -8,9 +8,10 @@ function Welcome() {
         <div className="welcome-text">
           <h1 className="welcome-title">
             <img className="absolute" src={crlc} alt="" />
-            <h3 className="relative">
-              Financial Solutions Crafted for Success
-            </h3>
+            <span className="relative">
+              Financial Solutions <br />
+              Crafted for Success
+            </span>
           </h1>
           <p>
             Accelerate Your Business's Financial Performance with GC Partners'

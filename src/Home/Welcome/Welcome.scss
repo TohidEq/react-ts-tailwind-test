@@ -1,6 +1,6 @@
 .welcome {
-  @apply h-screen 
-    bg-welcome-img bg-cover
+  @apply h-[97vh] bg-cover bg-center
+    bg-welcome-img bg-fixed
     text-center;
 
   .welcome-gradient {
@@ -13,18 +13,33 @@
     @apply max-w-[600px] h-full mx-auto grid place-content-center pb-32;
 
     .welcome-title {
-      @apply font-bold relative leading-snug
-      text-6xl;
+      @apply font-bold relative  w-fit mx-auto 
+        text-3xl
+      sm:text-5xl
+      md:text-6xl;
+
+      span {
+        @apply leading-normal;
+      }
+
       img {
-        @apply absolute bottom-0 right-3 scale-110;
+        @apply absolute
+        -bottom-4 -right-14 scale-[55%]
+        sm:-bottom-1 sm:-right-4 sm:scale-[85%]
+        md:bottom-1 md:right-1 md:scale-[105%];
       }
     }
 
     p {
-      @apply py-10 px-7 font-light text-lg;
+      @apply py-10 px-10 sm:px-7 font-light
+      text-base max-w-md 
+      sm:max-w-none
+      sm:text-lg;
     }
     button {
-      @apply mx-auto px-12 py-3;
+      @apply mx-auto 
+      px-10 py-2
+      sm:px-12 sm:py-3;
     }
   }
 }
