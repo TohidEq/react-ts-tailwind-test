@@ -33,4 +33,41 @@
       md:px-12;
     }
   }
+
+  .wwd-cards {
+    @apply flex flex-wrap justify-around;
+
+    .wwd-card {
+      @apply w-5/6 sm:w-2/5 md:w-1/4 overflow-hidden
+      transition-all duration-150
+      border-b-honey
+      border-b-4 sm:border-b-8
+      my-5 grid grid-cols-1 content-between
+      hover:scale-105 
+      hover:shadow-md shadow-royal;
+      .texts {
+        @apply px-2 pt-4 grid grid-cols-1 content-between;
+
+        h2 {
+          @apply font-medium text-2xl;
+        }
+
+        p {
+          @apply font-light opacity-70 py-4;
+        }
+      }
+
+      a {
+        @apply flex p-2 text-honey relative 
+        transition-all duration-150
+        w-fit
+        hover:scale-105 active:scale-95;
+
+        svg {
+          @apply absolute w-7 h-2/3
+          left-24;
+        }
+      }
+    }
+  }
 }

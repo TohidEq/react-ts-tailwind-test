@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsArrowRight } from "react-icons/bs";
+import { TiArrowRight } from "react-icons/ti";
 type Props = {
   img: string;
   title: string;
@@ -13,13 +13,18 @@ function WWDCaed(props: Props) {
 
   return (
     <article className="wwd-card">
-      <img src={props.img} alt={props.title} />
-
-      <h2> {props.title} </h2>
-      <p> {props.text} </p>
-      <Link to={props.link}>
-        Learn More <BsArrowRight />
-      </Link>
+      <div>
+        <img src={props.img} alt={props.title} />
+        <div className="texts">
+          <h2> {props.title} </h2>
+          <p> {props.text} </p>
+        </div>
+      </div>
+      <div>
+        <Link to={props.link}>
+          Learn More <TiArrowRight />
+        </Link>
+      </div>
     </article>
   );
 }
