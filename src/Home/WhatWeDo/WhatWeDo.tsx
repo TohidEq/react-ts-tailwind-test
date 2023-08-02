@@ -1,4 +1,3 @@
-import React from "react";
 import WWDCaed from "./WWDCaed";
 
 function WhatWeDo() {

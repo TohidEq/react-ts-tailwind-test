@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { useState } from "react";
 function NavMobile() {
   // Nav-mobile sliding Cotroller
   const [btn, setBtn] = useState<boolean>(false);

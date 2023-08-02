@@ -1,4 +1,3 @@
-import React from "react";
 import crlc from "../../assets/crlc.svg";
 
 function Welcome() {

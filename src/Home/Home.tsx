@@ -1,5 +1,3 @@
-import React from "react";
-
 import Welcome from "./Welcome/Welcome";
 import WhatWeDo from "./WhatWeDo/WhatWeDo";
 import AboutUs from "./AboutUs/AboutUs";
