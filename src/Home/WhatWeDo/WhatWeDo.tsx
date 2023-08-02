@@ -32,7 +32,11 @@ function WhatWeDo() {
     <div className="wwd">
       <div className="wwd-smry">
         <span>What We Do</span>
-        <h1>Financial journey starts here</h1>
+        <h1>
+          Financial journey
+          <br />
+          starts here
+        </h1>
         <p>
           We understand the challenges businesses face in today's ever-changing
           landscape, and our goal is to help you navigate those challenges and

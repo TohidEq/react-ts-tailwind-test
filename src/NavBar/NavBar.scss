@@ -85,7 +85,7 @@ nav.nav-mobile {
   background: linear-gradient(180deg, #150f28 0%, rgba(21, 15, 40, 0) 157.3%);
 
   @apply absolute 
-    
+    overflow-hidden
     left-full
     lg:hidden
     w-0

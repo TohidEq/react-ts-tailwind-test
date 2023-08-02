@@ -1,0 +1,36 @@
+.wwd {
+  @apply bg-white w-full text-royal 
+  py-16
+  sm:py-24
+  md:py-36;
+
+  & > * {
+    @apply container mx-auto;
+  }
+
+  .wwd-smry {
+    @apply text-center;
+
+    span {
+      @apply text-honey font-bold 
+      text-2xl
+      sm:text-3xl
+      md:text-4xl;
+    }
+
+    h1 {
+      @apply font-bold py-4 leading-snug
+      text-3xl
+      sm:text-5xl
+      md:text-6xl;
+    }
+
+    p {
+      @apply leading-snug font-light 
+      mx-auto pt-4 md:pt-6 pb-10 md:pb-16
+      max-w-3xl
+      px-2
+      md:px-12;
+    }
+  }
+}
