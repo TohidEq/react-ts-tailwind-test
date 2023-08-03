@@ -1,0 +1,95 @@
+.join-us-base {
+  @apply bg-white text-royal
+  sm:py-24
+  md:py-36;
+}
+
+.join-us {
+  @apply grid px-2
+    grid-cols-1
+    lg:grid-cols-2;
+
+  .join-us-smry {
+    @apply text-left pb-5;
+
+    span {
+      @apply text-honey font-bold 
+        text-2xl
+        sm:text-3xl
+        md:text-4xl;
+    }
+
+    h1 {
+      @apply font-bold py-4 leading-snug lg:pt-6
+        text-4xl
+        sm:text-5xl
+        lg:text-6xl;
+    }
+
+    p {
+      @apply font-light 
+        pt-4 md:pt-6 pb-8 md:pb-10 max-w-2xl
+        leading-snug
+        text-xl
+        md:text-2xl;
+    }
+    a {
+      @apply mx-0 inline-block
+        px-10 py-2
+        sm:px-12 sm:py-3 border-[3px] font-bold;
+    }
+  }
+
+  .join-us-cards {
+    @apply p-0.5 pb-0;
+
+    .join-us-card-base {
+      background: linear-gradient(
+        180deg,
+        hsla(0, 0%, 69%, 1) 27%,
+        hsla(0, 0%, 100%, 1) 100%,
+        hsla(0, 0%, 100%, 1) 100%
+      );
+      @apply p-1 pb-0  rounded-lg my-2;
+    }
+
+    .join-us-card {
+      @apply rounded-lg  bg-white 
+    hover:bg-latte
+      transition-all duration-150
+      justify-between
+      lg:grid lg:grid-cols-8 
+      p-6  
+      lg:p-8
+      
+      pr-3;
+
+      .texts {
+        @apply lg:col-span-6;
+        h2 {
+          @apply font-bold text-lg md:text-xl;
+        }
+
+        h3 {
+          @apply font-light text-base md:text-lg;
+        }
+      }
+      a {
+        @apply flex p-2 pl-0 text-honey relative 
+
+          transition-all duration-150
+          h-fit w-fit
+          hover:scale-105 active:scale-95
+          font-medium text-lg
+          md:col-span-2 
+          xl:left-5 
+          2xl:left-12;
+
+        svg {
+          @apply absolute w-6 h-2/3
+            left-24;
+        }
+      }
+    }
+  }
+}
