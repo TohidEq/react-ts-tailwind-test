@@ -1,0 +1,118 @@
+.rls {
+  @apply bg-white w-full text-royal 
+    py-16
+    sm:py-24
+    md:py-36;
+
+  & > * {
+    @apply container mx-auto;
+  }
+
+  .rls-smry {
+    @apply text-center;
+
+    span {
+      @apply text-honey font-bold 
+        text-2xl
+        sm:text-3xl
+        md:text-4xl;
+    }
+
+    h1 {
+      @apply font-bold py-4 leading-snug
+        text-3xl
+        sm:text-5xl
+        md:text-6xl;
+    }
+
+    p {
+      @apply leading-snug font-light 
+        mx-auto pt-4 md:pt-6 pb-10 md:pb-16
+        max-w-3xl
+        px-2
+        md:px-12
+        md:text-lg;
+    }
+  }
+
+  .rls-cards {
+    .rls-card {
+      @apply mx-auto 
+      h-[400px]
+      md:h-[462px];
+
+      .rls-img {
+        @apply bg-cover bg-center h-full flex mx-2
+          border-b-honey border-b-4 md:border-b-8;
+
+        .gradient {
+          background: linear-gradient(
+            0deg,
+            #1c232d 0%,
+            rgba(0, 0, 0, 0) 70%,
+            rgba(28, 35, 45, 0) 49.94%
+          );
+
+          @apply w-full h-[249px] self-end flex;
+
+          .texts {
+            @apply self-end text-latte
+                pl-6 pb-6
+                md:pl-10 md:pb-10;
+
+            h3 {
+              @apply font-bold text-4xl py-3;
+            }
+            h4 {
+              @apply text-base pb-2;
+            }
+            a {
+              @apply flex p-2 pl-0 text-honey relative 
+                transition-all duration-150
+                w-fit
+                hover:scale-105 active:scale-95;
+
+              svg {
+                @apply absolute w-7 h-2/3
+                  left-24;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .slick-dots {
+      @apply static;
+    }
+
+    ul.btns {
+      @apply block static pt-7;
+      li {
+        @apply border-transparent rounded-full
+          mx-0.5
+          w-5 h-5
+          md:w-6 md:h-6
+          border-[3px]
+          md:border-4;
+
+        .btn {
+          @apply w-full h-full 
+            transition-all duration-150 
+            bg-royal rounded-full hover:opacity-70
+            border-transparent
+  
+            border-[3px]
+            md:border-4;
+        }
+
+        &.slick-active {
+          @apply border-honey;
+          .btn {
+            @apply bg-transparent;
+          }
+        }
+      }
+    }
+  }
+}
