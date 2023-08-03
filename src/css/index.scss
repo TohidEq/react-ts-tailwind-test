@@ -1046,6 +1046,80 @@ nav.nav-mobile {
   }
 }
 
+.footer{
+  text-align: center;
+  color: rgb(247 245 243 / 0.4);
+  .title{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .title{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .title{
+    font-weight: 700;
+  }
+  .title{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  .title {
+    span{
+      --tw-text-opacity: 1;
+      color: rgb(192 166 21 / var(--tw-text-opacity));
+    }
+  }
+  .links{
+    display: flex;
+  }
+  .links{
+    flex-wrap: wrap;
+  }
+  .links{
+    justify-content: center;
+  }
+  .links{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .links {
+    a{
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    a{
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    a{
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    a{
+      transition-duration: 150ms;
+    }
+    a:hover{
+      color: rgb(247 245 243 / 0.8);
+    }
+    a:active{
+      --tw-text-opacity: 1;
+      color: rgb(247 245 243 / var(--tw-text-opacity));
+    }
+  }
+  .bottom-text{
+    border-top-width: 2px;
+  }
+  .bottom-text{
+    border-top-color: rgb(247 245 243 / 0.1);
+  }
+  .bottom-text{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
 .welcome{
   height: 97vh;
   background-image: url('/wlcm.png');

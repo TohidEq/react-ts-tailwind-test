@@ -1,0 +1,22 @@
+.footer {
+  @apply text-center text-latte/40;
+
+  .title {
+    @apply text-white font-bold text-xl py-4;
+    span {
+      @apply text-honey;
+    }
+  }
+
+  .links {
+    @apply py-4 flex flex-wrap justify-center;
+    a {
+      @apply px-5 py-2  transition-all duration-150
+      hover:text-latte/80 active:text-latte;
+    }
+  }
+
+  .bottom-text {
+    @apply py-8 border-t-2 border-t-latte/10;
+  }
+}
