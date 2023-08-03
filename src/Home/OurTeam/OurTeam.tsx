@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import PersonCard from "./PersonCard";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 function OurTeam() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
