@@ -1,0 +1,13 @@
+.ryr {
+  .ryr-smry {
+    @apply max-w-3xl mx-auto text-royal px-2 md:px-0;
+
+    h1 {
+      @apply leading-tight font-semibold opacity-90;
+    }
+
+    p {
+      @apply leading-relaxed opacity-80;
+    }
+  }
+}
