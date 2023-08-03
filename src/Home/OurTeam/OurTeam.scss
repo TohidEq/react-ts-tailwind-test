@@ -1,0 +1,102 @@
+.our-team {
+  @apply bg-white text-royal 
+  py-16
+  sm:py-24
+  md:py-36;
+
+  .our-team-smry {
+    @apply w-full 
+    px-2
+    md:px-12;
+
+    h2 {
+      @apply font-bold py-4 leading-snug
+        text-3xl
+        sm:text-5xl
+        md:text-6xl;
+    }
+    .texts {
+      @apply lg:flex justify-between w-full md:pt-6 pb-10 md:pb-16;
+
+      p {
+        @apply leading-snug font-light 
+          pt-4 
+          max-w-3xl
+          md:text-lg;
+      }
+
+      a {
+        @apply inline-block w-fit h-fit self-center ml-0 lg:mt-0 mt-10;
+      }
+    }
+  }
+
+  .persons {
+    .person-card {
+      @apply mx-auto 
+      max-w-[335px] md:max-w-[385px] 
+      h-[400px] md:h-[450px];
+
+      .person-img {
+        @apply bg-cover bg-center h-full flex mx-2
+        border-b-honey border-b-4 md:border-b-8;
+
+        .gradient {
+          background: linear-gradient(
+            180deg,
+            rgba(21, 15, 40, 0) 0%,
+            #150f28 100%
+          );
+
+          @apply w-full h-[249px] self-end flex;
+
+          .texts {
+            @apply self-end text-latte
+              pl-6 pb-6
+              md:pl-10 md:pb-10;
+
+            h3 {
+              @apply font-bold text-2xl;
+            }
+            h4 {
+              @apply text-base;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-dots {
+      @apply static;
+    }
+
+    ul.btns {
+      @apply block static pt-7;
+      li {
+        @apply border-transparent rounded-full
+        mx-0.5
+        w-5 h-5
+        md:w-6 md:h-6
+        border-[3px]
+        md:border-4;
+
+        .btn {
+          @apply w-full h-full 
+          transition-all duration-150 
+          bg-royal rounded-full hover:opacity-70
+          border-transparent
+
+          border-[3px]
+          md:border-4;
+        }
+
+        &.slick-active {
+          @apply border-honey;
+          .btn {
+            @apply bg-transparent;
+          }
+        }
+      }
+    }
+  }
+}
