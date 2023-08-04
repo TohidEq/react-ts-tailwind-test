@@ -591,13 +591,59 @@ video {
   display: table;
 }
 
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .resize{
   resize: both;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.py-36{
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold{
+  font-weight: 700;
 }
 
 .text-honey{
   --tw-text-opacity: 1;
   color: rgb(192 166 21 / var(--tw-text-opacity));
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .before\:hidden::before{
@@ -608,6 +654,23 @@ video {
 .after\:hidden::after{
   content: var(--tw-content);
   display: none;
+}
+
+.hover\:text-honey\/60:hover{
+  color: rgb(192 166 21 / 0.6);
+}
+
+.active\:text-white:active{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.active\:text-white\/50:active{
+  color: rgb(255 255 255 / 0.5);
+}
+
+.active\:text-white\/5:active{
+  color: rgb(255 255 255 / 0.05);
 }
 
 @media (min-width: 1024px){
