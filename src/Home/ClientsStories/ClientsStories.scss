@@ -1,9 +1,8 @@
 .clnt-stry {
   @apply container mx-auto relative px-2
 
-  py-16
-  sm:py-24
-  md:py-36;
+  pt-16
+  pb-16;
 
   .clnt-stry-smry {
     @apply pb-4;
@@ -23,9 +22,10 @@
   }
 
   .slideshow {
+    @apply 2xl:mx-[90px];
     .stories {
       .story-card {
-        @apply max-w-[360px] mx-auto p-2 relative;
+        @apply max-w-none mx-auto p-2 relative;
 
         .img {
           @apply w-[72px] h-[72px] bg-cover bg-center
@@ -77,6 +77,77 @@
                 @apply text-honey;
               }
             }
+          }
+        }
+      }
+    }
+
+    .slider-btns {
+      @apply w-fit mx-auto pt-5;
+      .left,
+      .right {
+        @apply transition-all duration-150 rounded-full
+         bg-latte/10 
+         hover:bg-latte/20 hover:scale-105
+          active:bg-honey/30 active:scale-95
+         p-2 mx-2;
+
+        svg {
+          @apply w-6 h-6;
+        }
+      }
+    }
+
+    .slick-dots {
+      @apply absolute w-[250px] 
+
+      w-full
+      lg:w-[300px]
+      xl:w-[500px]
+      pt-0
+      flex
+      justify-between
+      h-fit
+      -top-2
+      
+      lg:right-0
+      2xl:right-0
+      lg:-top-36;
+
+      .line {
+        @apply h-1 my-2 rounded
+          w-[55%]
+          sm:w-[75%]
+          lg:w-[45%]
+          xl:w-[65%]
+         bg-white;
+      }
+    }
+
+    ul.btns {
+      @apply block static;
+      li {
+        @apply border-transparent rounded-full
+          mx-0.5
+          w-5 h-5
+          md:w-6 md:h-6
+          border-[3px]
+          md:border-4;
+
+        .btn {
+          @apply w-full h-full 
+            transition-all duration-150 
+            bg-white rounded-full hover:opacity-70
+            border-transparent
+  
+            border-[3px]
+            md:border-4;
+        }
+
+        &.slick-active {
+          @apply border-honey;
+          .btn {
+            @apply bg-transparent;
           }
         }
       }

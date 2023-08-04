@@ -1,8 +1,9 @@
 import Slider from "react-slick";
 import StoryCard from "./StoryCard";
-import { useEffect, useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 function ClientsStories() {
+  const slick: any = useRef();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const slidesToShow = () => {
@@ -32,6 +33,7 @@ function ClientsStories() {
     arrows: false,
     appendDots: (dots: any) => (
       <div className="slick-dots">
+        <div className="line"></div>
         <ul className="btns"> {dots} </ul>
       </div>
     ),
@@ -88,7 +90,7 @@ function ClientsStories() {
       </div>
 
       <div className="slideshow">
-        <Slider {...settings} className="stories">
+        <Slider ref={slick} {...settings} className="stories">
           {storiesData.map((story) => (
             <StoryCard
               img={story.img}
@@ -98,6 +100,25 @@ function ClientsStories() {
             />
           ))}
         </Slider>
+        <div className="slider-btns ">
+          <button
+            className="left"
+            onClick={() => {
+              slick.current?.slickPrev();
+            }}
+          >
+            <BiLeftArrowAlt />
+          </button>
+
+          <button
+            className="right"
+            onClick={() => {
+              slick.current?.slickNext();
+            }}
+          >
+            <BiRightArrowAlt />
+          </button>
+        </div>
       </div>
     </div>
   );
