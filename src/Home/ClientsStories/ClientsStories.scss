@@ -1,0 +1,85 @@
+.clnt-stry {
+  @apply container mx-auto relative px-2
+
+  py-16
+  sm:py-24
+  md:py-36;
+
+  .clnt-stry-smry {
+    @apply pb-4;
+    span {
+      @apply text-honey font-bold 
+        text-2xl
+        sm:text-3xl
+        md:text-4xl;
+    }
+
+    h2 {
+      @apply font-bold py-4 leading-snug
+          text-3xl
+          sm:text-5xl
+          md:text-6xl;
+    }
+  }
+
+  .slideshow {
+    .stories {
+      .story-card {
+        @apply max-w-[360px] mx-auto p-2 relative;
+
+        .img {
+          @apply w-[72px] h-[72px] bg-cover bg-center
+          rounded-full border-white border-4
+          relative
+          top-0 left-1/2 -translate-x-1/2 translate-y-1/2
+          scale-125;
+        }
+        .texts {
+          @apply bg-white text-royal 
+          text-center rounded-md p-4 h-[210px];
+
+          h3 {
+            @apply pt-12 
+            font-bold text-lg;
+          }
+          p {
+            @apply text-xs sm:px-2;
+          }
+
+          .stars {
+            @apply flex justify-center text-royal/50 gap-x-2 py-2;
+
+            svg {
+              @apply w-5 h-5;
+            }
+            &.star-1 {
+              & > svg:nth-child(-n + 1) {
+                @apply text-honey;
+              }
+            }
+            &.star-2 {
+              & > svg:nth-child(-n + 2) {
+                @apply text-honey;
+              }
+            }
+            &.star-3 {
+              & > svg:nth-child(-n + 3) {
+                @apply text-honey;
+              }
+            }
+            &.star-4 {
+              & > svg:nth-child(-n + 4) {
+                @apply text-honey;
+              }
+            }
+            &.star-5 {
+              & > svg {
+                @apply text-honey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
