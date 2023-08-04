@@ -16,12 +16,14 @@ function NavMobile() {
           </Link>
         </div>
 
-        <div className="nav-item">
+        <div className="nav-item nav-btn">
           <button
-            className=" hover:scale-[105%] nav-btn"
             onClick={() => setBtn(!btn)}
+            className={`nav ${btn ? "open" : ""}`}
           >
-            {btn ? <BiRightArrow /> : <BiLeftArrow />}
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </nav>
