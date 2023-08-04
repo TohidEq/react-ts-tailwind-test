@@ -27,7 +27,12 @@ function ContactUs() {
                 </p>
               </div>
 
-              <form action="" className="inputs" autoComplete="off">
+              <form
+                action=""
+                className="inputs"
+                autoComplete="off"
+                onSubmit={handleSubmit}
+              >
                 <div className="input">
                   <label htmlFor="Email">Email</label>
                   <input
