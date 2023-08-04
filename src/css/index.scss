@@ -2971,6 +2971,10 @@ nav.nav-mobile {
 }
 
 .ryr {
+  @extend .rls;
+  .ryr-smry {
+    @extend .rls-smry
+  }
   .ryr-smry{
     margin-left: auto;
     margin-right: auto;

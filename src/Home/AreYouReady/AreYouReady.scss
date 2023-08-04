@@ -1,5 +1,8 @@
 .ryr {
+  @extend .rls;
+
   .ryr-smry {
+    @extend .rls-smry;
     @apply max-w-3xl mx-auto text-royal px-2 md:px-0;
 
     h1 {
