@@ -21,6 +21,7 @@ module.exports = {
       backgroundImage: {
         'welcome-img': "url('/wlcm.png')",
         'about-us-img': "url('/aboutUs.png')",
+        'cntct-us-img': "url('/contactUs.png')",
       }
     }
   },
