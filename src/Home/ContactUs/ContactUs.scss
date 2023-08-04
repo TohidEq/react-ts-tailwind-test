@@ -46,8 +46,15 @@
       .input {
         @apply grid grid-cols-1 pb-6;
 
+        .error-msg {
+          @apply text-[#faa];
+        }
+
         label {
-          @apply pb-2;
+          @apply pb-2 flex;
+          svg {
+            @apply w-4 h-6 mx-2;
+          }
         }
 
         textarea {
@@ -57,11 +64,15 @@
         input,
         textarea {
           @apply rounded-md
+          bg-latte/75
+            backdrop-blur-2xl
+          outline-none
+            border-[2px] border-transparent 
             p-2
             text-royal
             placeholder:text-royal/50
-            shadow-transparent  shadow-md
-            focus-visible:shadow-honey;
+            focus-visible:border-honey
+            focus-visible:bg-latte/90;
         }
       }
       .btn {

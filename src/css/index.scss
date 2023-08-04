@@ -3981,8 +3981,27 @@ nav.nav-mobile {
         padding-bottom: 1.5rem;
       }
       .input {
+        .error-msg{
+          --tw-text-opacity: 1;
+          color: rgb(255 170 170 / var(--tw-text-opacity));
+        }
+        label{
+          display: flex;
+        }
         label{
           padding-bottom: 0.5rem;
+        }
+        label {
+          svg{
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+          }
+          svg{
+            height: 1.5rem;
+          }
+          svg{
+            width: 1rem;
+          }
         }
         textarea{
           min-height: 160px;
@@ -3996,6 +4015,18 @@ nav.nav-mobile {
         }
         input,
         textarea{
+          border-width: 2px;
+        }
+        input,
+        textarea{
+          border-color: transparent;
+        }
+        input,
+        textarea{
+          background-color: rgb(247 245 243 / 0.75);
+        }
+        input,
+        textarea{
           padding: 0.5rem;
         }
         input,
@@ -4005,14 +4036,14 @@ nav.nav-mobile {
         }
         input,
         textarea{
-          --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-          --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          outline: 2px solid transparent;
+          outline-offset: 2px;
         }
         input,
         textarea{
-          --tw-shadow-color: transparent;
-          --tw-shadow: var(--tw-shadow-colored);
+          --tw-backdrop-blur: blur(40px);
+          -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+                  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
         }
         input::-moz-placeholder, textarea::-moz-placeholder{
           color: rgb(21 15 40 / 0.5);
@@ -4023,8 +4054,12 @@ nav.nav-mobile {
         }
         input:focus-visible,
         textarea:focus-visible{
-          --tw-shadow-color: #C0A615;
-          --tw-shadow: var(--tw-shadow-colored);
+          --tw-border-opacity: 1;
+          border-color: rgb(192 166 21 / var(--tw-border-opacity));
+        }
+        input:focus-visible,
+        textarea:focus-visible{
+          background-color: rgb(247 245 243 / 0.9);
         }
       }
       .btn{

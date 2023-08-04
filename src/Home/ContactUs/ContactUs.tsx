@@ -1,13 +1,26 @@
 import { useRef, useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
+import * as EmailValidator from "email-validator";
+
+import { AiOutlineMail } from "react-icons/ai";
+import { BsCardText } from "react-icons/bs";
+
 function ContactUs() {
+  const userEmail = useRef<HTMLInputElement>(null);
   const userText = useRef<HTMLTextAreaElement>(null);
   const [disableForm, setDisableForm] = useState<boolean>(false);
+  const [errorEmail, setErrorEmail] = useState<boolean>(false);
+  const [errorTxt, setErrorTxt] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setDisableForm(true);
-    // something ...
+    setErrorEmail(!EmailValidator.validate(userEmail.current?.value || ""));
+    setErrorTxt(userText.current?.value === "");
+
+    if (!errorEmail && !errorTxt) {
+      setDisableForm(false); //set it to TRUE
+      // something ...
+    }
   };
 
   return (
@@ -34,20 +47,30 @@ function ContactUs() {
                 onSubmit={handleSubmit}
               >
                 <div className="input">
-                  <label htmlFor="Email">Email</label>
+                  <label htmlFor="Email">
+                    <AiOutlineMail />
+                    Email
+                  </label>
                   <input
-                    type="email"
+                    type="text"
+                    ref={userEmail}
                     name="email"
                     id="user-email"
                     placeholder="yourmail@gmail.com"
+                    disabled={disableForm}
                   />
+                  <span className="error-msg">
+                    {errorEmail && "Please Enter True Email."}
+                  </span>
                 </div>
 
                 <div className="input">
-                  <label htmlFor="Message">Message</label>
+                  <label htmlFor="Message">
+                    <BsCardText />
+                    Message
+                  </label>
                   <TextareaAutosize
                     name="message"
-                    required
                     minRows={6}
                     autoComplete="off"
                     ref={userText}
@@ -56,6 +79,9 @@ function ContactUs() {
                     disabled={disableForm}
                     className="before:hidden after:hidden"
                   />
+                  <span className="error-msg">
+                    {errorTxt && "Please Enter Something."}
+                  </span>
                 </div>
 
                 <div className="btns">
