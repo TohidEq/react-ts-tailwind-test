@@ -90,7 +90,11 @@ nav.nav-mobile {
 .nav-side {
   & *,
   & {
-    @apply transition-all duration-200;
+    @apply transition-all duration-300 text-center;
+  }
+
+  & * {
+    @apply invisible duration-100;
   }
 
   background: linear-gradient(180deg, #150f28 0%, rgba(21, 15, 40, 0) 157.3%);
@@ -98,24 +102,38 @@ nav.nav-mobile {
   @apply absolute 
     overflow-hidden
     left-full
-    lg:hidden
+    lg:hidden border-b-2  border-b-transparent
     w-0
-    rounded-bl-xl
-    backdrop-blur-lg z-50;
+    rounded-b-xl
+    backdrop-blur-lg z-50
+    grid grid-cols-1;
+
   * {
-    @apply invisible;
+    @apply invisible scale-0;
   }
 
   &.true {
     @apply w-full
-    left-0;
+    left-0 border-b-2  border-b-honey;
     * {
-      @apply visible;
+      @apply visible p-1 scale-100;
+    }
+    .user-status {
+      @apply opacity-100 pb-12;
+      a {
+        @apply mx-3 
+        p-1
+        px-4;
+      }
     }
   }
 
+  a {
+    @apply text-base sm:text-xl font-semibold duration-300;
+  }
+
   .nav-links {
-    @apply text-2xl p-4;
+    @apply p-4 w-full;
 
     a {
       @apply hover:text-latte/60 block p-2
@@ -127,12 +145,15 @@ nav.nav-mobile {
   }
 
   .user-status {
-    @apply text-lg;
+    @apply text-lg sm:text-xl
+    w-full pb-0 duration-200 opacity-0;
 
     a {
-      @apply mx-6 block w-36 my-4
-        transition-all duration-150
-				
+      @apply transition-all 
+      mx-0 
+      p-0
+      inline-block
+        text-sm  duration-300
 				hover:scale-[105%]
         active:scale-95;
     }

@@ -1,9 +1,39 @@
 import { Link, NavLink } from "react-router-dom";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+
 import { useState } from "react";
+
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+
 function NavMobile() {
   // Nav-mobile sliding Cotroller
   const [btn, setBtn] = useState<boolean>(false);
+  // 1. Get a target element that you want to persist scrolling for (such as a modal/lightbox/flyout/nav).
+  // Specifically, the target element is the one we would like to allow scroll on (NOT a parent of that element).
+  // This is also the element to apply the CSS '-webkit-overflow-scrolling: touch;' if desired.
+  const targetElement = document.querySelector("#App");
+  const showTargetElement = () => {
+    // ... some logic to show target element
+
+    // 2. Disable body scroll
+    disableBodyScroll(targetElement!);
+  };
+
+  const hideTargetElement = () => {
+    // ... some logic to hide target element
+
+    // 3. Re-enable body scroll
+    enableBodyScroll(targetElement!);
+  };
+
+  //  IF U NEEDED THIS FUNCTION, UNCOMMENT AND USE
+  //  ---NEED TO IMPORT ``` {clearAllBodyScrollLocks} from "body-scroll-lock" ```
+  // function componentWillUnmount() {
+  //   // 4. Useful if we have called disableBodyScroll for multiple target elements,
+  //   // and we just want a kill-switch to undo all that.
+  //   // OR useful for if the `hideTargetElement()` function got circumvented eg. visitor
+  //   // clicks a link which takes him/her to a different page within the app.
+  //   clearAllBodyScrollLocks();
+  // }
 
   return (
     <div className="block lg:hidden">
@@ -18,7 +48,10 @@ function NavMobile() {
 
         <div className="nav-item nav-btn">
           <button
-            onClick={() => setBtn(!btn)}
+            onClick={() => {
+              setBtn(!btn);
+              btn ? hideTargetElement() : showTargetElement();
+            }}
             className={`nav ${btn ? "open" : ""}`}
           >
             <span></span>
